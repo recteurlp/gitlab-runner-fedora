@@ -35,12 +35,24 @@ update_ca_certificates() {
   fi
 }
 
+grant_access_to_docker_socket() {
+  if [ -S /run/docker.sock ]; then
+    DOCKER_SOCKET_GID=$(stat -c %g  /run/docker.sock)
+    DOCKER_SOCKET_GROUP=$(stat -c %G /run/docker.sock)
+    if [[ ${DOCKER_SOCKET_GROUP} == "UNKNOWN" ]]; then
+      DOCKER_SOCKET_GROUP=docker
+      groupadd -g ${DOCKER_SOCKET_GID} ${DOCKER_SOCKET_GROUP}
+    fi
+    usermod -a -G ${DOCKER_SOCKET_GROUP} ${GITLAB_CI_MULTI_RUNNER_USER}
+  fi
+}
+
 configure_ci_runner() {
   if [[ ! -e ${GITLAB_CI_MULTI_RUNNER_DATA_DIR}/config.toml ]]; then
     if [[ -n ${CI_SERVER_URL} && -n ${RUNNER_TOKEN} && -n ${RUNNER_DESCRIPTION} && -n ${RUNNER_EXECUTOR} ]]; then
       sudo -HEu ${GITLAB_CI_MULTI_RUNNER_USER} \
         gitlab-ci-multi-runner register --config ${GITLAB_CI_MULTI_RUNNER_DATA_DIR}/config.toml \
-          -n -u "${CI_SERVER_URL}" -r "${RUNNER_TOKEN}" -d "${RUNNER_DESCRIPTION}" -e "${RUNNER_EXECUTOR}"
+          -n -u "${CI_SERVER_URL}" -r "${RUNNER_TOKEN}" --name "${RUNNER_DESCRIPTION}" --executor "${RUNNER_EXECUTOR}"
     else
       sudo -HEu ${GITLAB_CI_MULTI_RUNNER_USER} \
         gitlab-ci-multi-runner register --config ${GITLAB_CI_MULTI_RUNNER_DATA_DIR}/config.toml
@@ -62,6 +74,7 @@ if [[ -z ${1} ]]; then
   create_data_dir
   update_ca_certificates
   generate_ssh_deploy_keys
+  grant_access_to_docker_socket
   configure_ci_runner
 
   sudo -u ${GITLAB_CI_MULTI_RUNNER_USER} $(which gitlab-ci-multi-runner) run \
