@@ -1,5 +1,8 @@
 # Changelog
 
+**1.0.4**
+ - Update to 1.0.4
+
 **1.0.1**
  - Fedora 23 Base Image
  - Update to 1.0.1
