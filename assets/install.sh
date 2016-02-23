@@ -9,4 +9,4 @@ sudo -HEu ${GITLAB_CI_MULTI_RUNNER_USER} ln -s ${GITLAB_CI_MULTI_RUNNER_DATA_DIR
 # download the gitlab-ci-multi-runner binary
 wget -O /usr/bin/gitlab-ci-multi-runner \
   https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-ci-multi-runner-linux-amd64
-chmod +x /usr/bin/gitlab-ci-multi-runner
+chmod +x /usr/bin/gitlab-ci-multi-runner && /usr/bin/gitlab-ci-multi-runner --version
