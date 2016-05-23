@@ -1,5 +1,8 @@
 # Changelog
 
+**1.2.0**
+ - Update to 1.2.0
+
 **1.0.4**
  - Update to 1.0.4
 
