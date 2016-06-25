@@ -1,4 +1,4 @@
-# recteurlp/gitlab-ci-multi-runner-fedora:1.2.0
+# recteurlp/gitlab-ci-multi-runner-fedora:1.3.1
 
 - [Introduction](#introduction)
   - [Contributing](#contributing)
