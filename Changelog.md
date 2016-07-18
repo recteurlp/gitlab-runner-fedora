@@ -1,5 +1,12 @@
 # Changelog
 
+**1.3.3-1**
+ - Update to 1.3.3
+
+**1.3.1**
+ - Update to 1.3.1
+ - Fedora 24 Base Image
+
 **1.2.0**
  - Update to 1.2.0
 
