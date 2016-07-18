@@ -9,6 +9,8 @@ RUN dnf install -v -y git sudo wget which hostname \
  && dnf clean all && rm -rf /usr/share/doc /usr/share/man /tmp/*
 
 COPY assets/install.sh /var/cache/gitlab-ci-multi-runner/install.sh
+ADD https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-ci-multi-runner-linux-amd64 /usr/bin/gitlab-ci-multi-runner
+
 RUN bash /var/cache/gitlab-ci-multi-runner/install.sh
 
 COPY entrypoint.sh /sbin/entrypoint.sh
