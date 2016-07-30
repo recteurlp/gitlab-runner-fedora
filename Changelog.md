@@ -1,5 +1,8 @@
 # Changelog
 
+**1.4.1**
+ - Update to 1.4.1
+
 **1.3.3-1**
  - Update to 1.3.3
 
