@@ -6,7 +6,8 @@ ENV GITLAB_CI_MULTI_RUNNER_USER=gitlab_ci_multi_runner \
 ENV GITLAB_CI_MULTI_RUNNER_DATA_DIR="${GITLAB_CI_MULTI_RUNNER_HOME_DIR}/data"
 ENV TERM xterm
 
-RUN dnf install -v -y git sudo wget which hostname \
+RUN echo -e 'tsflags=nodocs\ndeltarpm=0\ntimeout=4' >> /etc/dnf/dnf.conf \
+ && dnf install -v -y git sudo wget which hostname \
  && dnf clean all && rm -rf /usr/share/doc /usr/share/man /tmp/*
 
 COPY assets/install.sh /var/cache/gitlab-ci-multi-runner/install.sh
