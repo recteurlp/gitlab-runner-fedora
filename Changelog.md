@@ -1,5 +1,10 @@
 # Changelog
 
+[Runner ChangeLog](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/CHANGELOG.md)
+
+**1.6.0**
+  - Update to 1.6.0
+
 **1.5.2**
   - Update to 1.5.2
 
