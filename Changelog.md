@@ -2,6 +2,9 @@
 
 [Runner ChangeLog](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/CHANGELOG.md)
 
+**1.7.1**
+  - Update to 1.7.1
+
 **1.6.0**
   - Update to 1.6.0
 
