@@ -2,6 +2,10 @@
 
 [Runner ChangeLog](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/CHANGELOG.md)
 
+**1.8.0**
+  - Update to 1.8.0
+  - Fedora 25 Base Image
+
 **1.7.1**
   - Update to 1.7.1
 
@@ -31,12 +35,11 @@
  - Update to 1.0.4
 
 **1.0.1**
- - Fedora 23 Base Image
  - Update to 1.0.1
 
 **0.7.2**
- - Fedora 23 Base Image
  - Update to 0.7.2
+ - Fedora 23 Base Image
 
 **0.5.5**
  - Fedora 22 Base Image
