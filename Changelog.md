@@ -2,6 +2,12 @@
 
 [Runner ChangeLog](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/CHANGELOG.md)
 
+**1.9.0**
+  - Update to 1.9.0
+
+**1.8.1**
+  - Update to 1.8.1
+
 **1.8.0**
   - Update to 1.8.0
   - Fedora 25 Base Image
