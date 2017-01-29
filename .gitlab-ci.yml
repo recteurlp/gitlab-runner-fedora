@@ -1,6 +1,18 @@
+stages:
+  - build
+  - release
+
 Build docker image:
+  stage: build
   tags:
    - docker
   script:
-   - make release
+   - make build CI_BUILD_TAG=${CI_BUILD_TAG:-latest}
    - docker-clean
+
+Push docker image:
+  stage: release
+  tags:
+   - docker
+  script:
+   - sudo /usr/bin/docker push pyrmin.io:5000/gitlab-ci-multi-runner-fedora:${CI_BUILD_TAG:-latest}
