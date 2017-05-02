@@ -2,8 +2,8 @@
 
 [Runner ChangeLog](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/CHANGELOG.md)
 
-**9.1.0**
-  - Update to 9.1.0
+**9.1.1**
+  - Update to 9.1.1
 
 **1.10.3**
   - Update to 1.10.3
