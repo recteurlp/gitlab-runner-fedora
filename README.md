@@ -1,4 +1,4 @@
-# recteurlp/gitlab-ci-multi-runner-fedora:9.3.0
+# recteurlp/gitlab-ci-multi-runner-fedora:9.4.0
 
 - [Introduction](#introduction)
   - [Contributing](#contributing)
@@ -46,7 +46,7 @@ If the above recommendations do not help then [report your issue](../../issues/n
 This image is available as a [trusted build](//hub.docker.com/r/recteurlp/gitlab-ci-multi-runner-fedora) on the [Docker hub](//hub.docker.com) and is the recommended method of installation.
 
 ```bash
-docker pull recteurlp/gitlab-ci-multi-runner-fedora:9.3.0
+docker pull recteurlp/gitlab-ci-multi-runner-fedora:9.4.0
 ```
 
 Alternatively you can build the image yourself.
@@ -66,7 +66,7 @@ docker run --name gitlab-ci-multi-runner-fedora -d --restart=always \
   --volume /opt/gitlab-ci-multi-runner-fedora:/home/gitlab_ci_multi_runner/data \
   --env='CI_SERVER_URL=http://git.example.com' --env='RUNNER_TOKEN=xxxxxxxxx' \
   --env='RUNNER_DESCRIPTION=myrunner' --env='RUNNER_EXECUTOR=shell' \
-  recteurlp/gitlab-ci-multi-runner-fedora:9.3.0
+  recteurlp/gitlab-ci-multi-runner-fedora:9.4.0
 ```
 
 *Alternatively, you can use the sample [docker-compose.yml](docker-compose.example.yml) file to start the container using [Docker Compose](https://docs.docker.com/compose/)*
@@ -80,7 +80,7 @@ You can customize the launch command by specifying arguments to `gitlab-ci-multi
 ```bash
 docker run --name gitlab-ci-multi-runner-fedora -it --rm \
   --volume /opt/gitlab-ci-multi-runner-fedora:/home/gitlab_ci_multi_runner/data \
-  recteurlp/gitlab-ci-multi-runner-fedora:9.3.0 --help
+  recteurlp/gitlab-ci-multi-runner-fedora:9.4.0 --help
 ```
 
 ## Persistence
@@ -125,7 +125,7 @@ To upgrade to newer releases:
   1. Download the updated Docker image:
 
   ```bash
-  docker pull recteurlp/gitlab-ci-multi-runner-fedora:9.3.0
+  docker pull recteurlp/gitlab-ci-multi-runner-fedora:9.4.0
   ```
 
   2. Stop the currently running image:
@@ -145,7 +145,7 @@ To upgrade to newer releases:
   ```bash
   docker run -name gitlab-ci-multi-runner-fedora -d \
     [OPTIONS] \
-    recteurlp/gitlab-ci-multi-runner-fedora:9.3.0
+    recteurlp/gitlab-ci-multi-runner-fedora:9.4.0
   ```
 
 ## Shell Access
@@ -159,7 +159,7 @@ docker exec -it gitlab-ci-multi-runner-fedora bash
 # Create Custom Runner Image
 
 ```
-FROM recteurlp/gitlab-ci-multi-runner-fedora:9.3.0
+FROM recteurlp/gitlab-ci-multi-runner-fedora:9.4.0
 
 ENV HTTP_PROXY http://proxy
 
