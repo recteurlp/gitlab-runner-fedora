@@ -1,9 +1,13 @@
 # Changelog
 
-[Runner ChangeLog](https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/CHANGELOG.md)
+[Runner ChangeLog](https://gitlab.com/gitlab-org/gitlab-runner/blob/master/CHANGELOG.md)
 
-**10.0.1**
-  - Update to 10.0.1
+**10.0.2**
+  - Update to 10.0.2
+  - Rename repository to gitlab-runner
+
+**10.0.2**
+  - Update to 10.0.2
 
 **1.10.3**
   - Update to 1.10.3

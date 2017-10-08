@@ -7,7 +7,7 @@ Build docker image:
   tags:
    - docker
   script:
-   - make build CI_BUILD_TAG=${CI_BUILD_TAG:-latest}
+   - make build CI_JOB_TAG=${CI_JOB_TAG:-latest}
    - docker-clean
 
 Push docker image:
@@ -15,4 +15,4 @@ Push docker image:
   tags:
    - docker
   script:
-   - sudo /usr/bin/docker push pyrmin.io:5000/gitlab-ci-multi-runner-fedora:${CI_BUILD_TAG:-latest}
+   - sudo /usr/bin/docker push pyrmin.io:5000/gitlab-runner-fedora:${CI_JOB_TAG:-latest}
