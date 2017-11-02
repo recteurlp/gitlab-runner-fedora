@@ -41,7 +41,10 @@ grant_access_to_docker_socket() {
     DOCKER_SOCKET_GROUP=$(stat -c %G /run/docker.sock)
     if [[ ${DOCKER_SOCKET_GROUP} == "UNKNOWN" ]]; then
       DOCKER_SOCKET_GROUP=docker
-      groupadd -g ${DOCKER_SOCKET_GID} ${DOCKER_SOCKET_GROUP}
+      getent group docker
+      if [[ $? -gt 0 ]]; then
+        groupadd -g ${DOCKER_SOCKET_GID} ${DOCKER_SOCKET_GROUP}
+      fi
     fi
     usermod -a -G ${DOCKER_SOCKET_GROUP} ${GITLAB_RUNNER_USER}
   fi
