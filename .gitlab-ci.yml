@@ -15,4 +15,4 @@ Push docker image:
   tags:
    - docker
   script:
-   - sudo /usr/bin/docker push pyrmin.io/gitlab-runner-fedora:${CI_JOB_TAG:-latest}
+   - docker push pyrmin.io/gitlab-runner-fedora:${CI_JOB_TAG:-latest}
