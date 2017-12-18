@@ -6,7 +6,7 @@ ENV GITLAB_RUNNER_USER=gitlab_runner \
 ENV GITLAB_RUNNER_DATA_DIR="${GITLAB_RUNNER_HOME_DIR}/data"
 ENV TERM xterm
 
-RUN echo -e 'tsflags=nodocs\ndeltarpm=0\ntimeout=4' >> /etc/dnf/dnf.conf \
+RUN echo -e 'tsflags=nodocs\ndeltarpm=0' >> /etc/dnf/dnf.conf \
  && dnf install -v -y git sudo wget which hostname \
  && dnf clean all && rm -rf /usr/share/doc /usr/share/man /tmp/*
 
