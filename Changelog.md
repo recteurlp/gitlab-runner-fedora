@@ -2,12 +2,12 @@
 
 [Runner ChangeLog](https://gitlab.com/gitlab-org/gitlab-runner/blob/master/CHANGELOG.md)
 
-**10.6.0**
-  - Update to 10.6.0
+**10.7.0**
+  - Update to 10.7.0
   - Rename repository to gitlab-runner
 
-**10.6.0**
-  - Update to 10.6.0
+**10.7.0**
+  - Update to 10.7.0
 
 **1.10.3**
   - Update to 1.10.3
