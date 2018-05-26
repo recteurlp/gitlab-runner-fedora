@@ -2,6 +2,10 @@
 
 [Runner ChangeLog](https://gitlab.com/gitlab-org/gitlab-runner/blob/master/CHANGELOG.md)
 
+**10.8.0**
+  - Fedora 28 Base Image
+  - Update to 10.8.0
+
 **10.7.0**
   - Update to 10.7.0
   - Rename repository to gitlab-runner
