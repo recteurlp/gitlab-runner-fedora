@@ -1,18 +1,11 @@
 stages:
-  - build
   - release
 
 Build docker image:
-  stage: build
-  tags:
-   - docker
-  script:
-   - make build CI_COMMIT_TAG=${CI_COMMIT_TAG:-latest}
-
-Push docker image:
   stage: release
   tags:
    - docker
   script:
+   - make build CI_COMMIT_TAG=${CI_COMMIT_TAG:-latest}
    - docker push pyrmin.io/gitlab-runner-fedora:${CI_COMMIT_TAG:-latest}
    - docker-clean
