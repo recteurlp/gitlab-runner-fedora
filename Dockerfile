@@ -1,4 +1,4 @@
-FROM fedora:31
+FROM fedora:32
 MAINTAINER recteurlp@gmail.com
 
 ENV GITLAB_RUNNER_USER=gitlab_runner \
